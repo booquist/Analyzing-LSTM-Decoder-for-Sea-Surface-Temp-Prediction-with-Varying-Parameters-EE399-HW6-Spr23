@@ -210,6 +210,18 @@ We'll examine the performance of the model based on the three different paramete
 
 ![image](https://github.com/booquist/Analyzing-LSTM-Decoder-for-Sea-Surface-Temp-Prediction-with-Varying-Parameters-EE399-HW6-Spr23/assets/103399658/ad3baecd-4752-484d-8991-95fb1d90fe2c)
 
-In conclusion, these findings illustrate the importance of carefully tuning the model parameters for optimal performance, including the time lag, noise level, and the number of sensors used.
+## V. Summary and Conclusions
+
+In this project, we conducted an extensive analysis on the performance of the SHRED model applied to sea-surface temperature data. The SHRED model employs an LSTM/decoder structure, making it suitable for time-series predictions.
+
+The performance was evaluated with respect to various parameters: the time lag variable, the level of Gaussian noise added to the data, and the number of sensors used.
+
+We found that the Mean Squared Error (MSE) showed a slight decrease with an increase in the time lag, although there was a marginal spike in MSE when transitioning from a time lag of 26 to 52. This indicates that the time lag doesn't have a strong influence on the model's performance.
+
+When investigating the effect of noise, it was clear that as the noise level in the data increased, the model's MSE grew correspondingly. This is intuitive as noise tends to obscure the underlying patterns in the data, making it more challenging to predict accurately.
+
+Finally, our investigation showed a somewhat counterintuitive outcome with respect to the number of sensors used. We found that the model's performance tended to degrade slightly as the number of sensors increased. This could be due to a potential increase in data complexity or noise, which might make the model's task more difficult.
+
+In conclusion, despite the slight increase in MSE with more sensors, the model demonstrated robustness across different noise levels and time lag variables.
 
 
